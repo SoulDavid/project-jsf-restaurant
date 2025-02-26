@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+
+      <h:head>
+      	<h:outputStylesheet library = "css" name = "styles.css"></h:outputStylesheet>
+      </h:head>
+      
+      <h:body>
+      
+      		<h:form id = "formLogin">
+      			<!-- Rectangulo de formulario -->
+      			<h:panelGrid columns = "2">
+      				<h:outputLabel value = "User: " styleClass = "colorText"></h:outputLabel>      				
+      				<h:inputText id = "txtUser" value = "#{loginController.user}" required = "true" requiredMessage = "Username is required"></h:inputText>
+      			
+      				<h:outputLabel value = "Password: " styleClass = "colorText"></h:outputLabel>
+      				<h:inputSecret id = "txtPassword" value = "#{loginController.password}" required = "true" requiredMessage = "Password is required"></h:inputSecret>
+      				
+      				<h:commandButton value = "Enter" action = "#{loginController.Access}"></h:commandButton>
+      			</h:panelGrid>
+      		</h:form>
+      		      		
+      </h:body>
+</html>
